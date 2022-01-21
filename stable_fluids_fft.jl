@@ -10,11 +10,17 @@ I am not setting out to improve this code, only understand it better.
 Many comments are my own additions that function as a deeper 
 explanation of the code's functionality.
 
+This code utilizes some of Julia's special operations that allow force
+conscise element-wise array manipulation as well as algorithms that operate
+in-place which saves both time and space.
+
 -Sean C Lewis
 ________________________________________________________
 ________________________________________________________
 
-Solves the equations of fluid flow using "Stable Fluids" by Jos Stam with the
+Solves the equations of incompressible fluid flow using 
+'Stable Fluids' by Jos Stam. The incompressible Navier-Stokes equations
+is solved by transforming to and from fourier-space using the
 FFT to obtain super fast cartesian mesh simulations.
 
 This works for the imcompressible Navier-Stokes equations:
